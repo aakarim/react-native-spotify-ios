@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C55BCD831E8DA9BE0001BBA4 /* RCTSpotify.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BCD821E8DA9BE0001BBA4 /* RCTSpotify.m */; };
+		C55BCD841E8DA9BE0001BBA4 /* RCTSpotify.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C55BCD811E8DA9BE0001BBA4 /* RCTSpotify.h */; };
+		C55BCD991E8DAF6D0001BBA4 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55BCD981E8DAF6D0001BBA4 /* SpotifyAudioPlayback.framework */; };
+		C55BCDA01E8DB4700001BBA4 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55BCD9F1E8DB4700001BBA4 /* SpotifyMetadata.framework */; };
+		C55BCDA21E8DB4720001BBA4 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55BCDA11E8DB4720001BBA4 /* SpotifyAuthentication.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C55BCD7C1E8DA9BE0001BBA4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				C55BCD841E8DA9BE0001BBA4 /* RCTSpotify.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C55BCD7E1E8DA9BE0001BBA4 /* libRCTSpotify.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTSpotify.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55BCD811E8DA9BE0001BBA4 /* RCTSpotify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTSpotify.h; sourceTree = "<group>"; };
+		C55BCD821E8DA9BE0001BBA4 /* RCTSpotify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTSpotify.m; sourceTree = "<group>"; };
+		C55BCD981E8DAF6D0001BBA4 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = ../../../ios/SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		C55BCD9F1E8DB4700001BBA4 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = ../../../ios/SpotifyMetadata.framework; sourceTree = "<group>"; };
+		C55BCDA11E8DB4720001BBA4 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = ../../../ios/SpotifyAuthentication.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C55BCD7B1E8DA9BE0001BBA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55BCD991E8DAF6D0001BBA4 /* SpotifyAudioPlayback.framework in Frameworks */,
+				C55BCDA01E8DB4700001BBA4 /* SpotifyMetadata.framework in Frameworks */,
+				C55BCDA21E8DB4720001BBA4 /* SpotifyAuthentication.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C55BCD751E8DA9BE0001BBA4 = {
+			isa = PBXGroup;
+			children = (
+				C55BCD801E8DA9BE0001BBA4 /* RCTSpotify */,
+				C55BCD7F1E8DA9BE0001BBA4 /* Products */,
+				C55BCD971E8DAF6D0001BBA4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C55BCD7F1E8DA9BE0001BBA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C55BCD7E1E8DA9BE0001BBA4 /* libRCTSpotify.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C55BCD801E8DA9BE0001BBA4 /* RCTSpotify */ = {
+			isa = PBXGroup;
+			children = (
+				C55BCD811E8DA9BE0001BBA4 /* RCTSpotify.h */,
+				C55BCD821E8DA9BE0001BBA4 /* RCTSpotify.m */,
+			);
+			path = RCTSpotify;
+			sourceTree = "<group>";
+		};
+		C55BCD971E8DAF6D0001BBA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C55BCDA11E8DB4720001BBA4 /* SpotifyAuthentication.framework */,
+				C55BCD9F1E8DB4700001BBA4 /* SpotifyMetadata.framework */,
+				C55BCD981E8DAF6D0001BBA4 /* SpotifyAudioPlayback.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C55BCD7D1E8DA9BE0001BBA4 /* RCTSpotify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C55BCD871E8DA9BE0001BBA4 /* Build configuration list for PBXNativeTarget "RCTSpotify" */;
+			buildPhases = (
+				C55BCD7A1E8DA9BE0001BBA4 /* Sources */,
+				C55BCD7B1E8DA9BE0001BBA4 /* Frameworks */,
+				C55BCD7C1E8DA9BE0001BBA4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCTSpotify;
+			productName = RCTSpotify;
+			productReference = C55BCD7E1E8DA9BE0001BBA4 /* libRCTSpotify.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C55BCD761E8DA9BE0001BBA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "A A Karim";
+				TargetAttributes = {
+					C55BCD7D1E8DA9BE0001BBA4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HG34E8EYT2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C55BCD791E8DA9BE0001BBA4 /* Build configuration list for PBXProject "RCTSpotify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C55BCD751E8DA9BE0001BBA4;
+			productRefGroup = C55BCD7F1E8DA9BE0001BBA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C55BCD7D1E8DA9BE0001BBA4 /* RCTSpotify */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C55BCD7A1E8DA9BE0001BBA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C55BCD831E8DA9BE0001BBA4 /* RCTSpotify.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C55BCD851E8DA9BE0001BBA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C55BCD861E8DA9BE0001BBA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C55BCD881E8DA9BE0001BBA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = HG34E8EYT2;
+				FRAMEWORK_SEARCH_PATHS = "~/Dropbox/Projects/MusicApp/Code/groovetrain-clients/ios/**";
+				HEADER_SEARCH_PATHS = "~/Dropbox/Projects/MusicApp/Code/groovetrain-clients/ios/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C55BCD891E8DA9BE0001BBA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = HG34E8EYT2;
+				FRAMEWORK_SEARCH_PATHS = "~/Dropbox/Projects/MusicApp/Code/groovetrain-clients/ios/**";
+				HEADER_SEARCH_PATHS = "~/Dropbox/Projects/MusicApp/Code/groovetrain-clients/ios/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C55BCD791E8DA9BE0001BBA4 /* Build configuration list for PBXProject "RCTSpotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55BCD851E8DA9BE0001BBA4 /* Debug */,
+				C55BCD861E8DA9BE0001BBA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C55BCD871E8DA9BE0001BBA4 /* Build configuration list for PBXNativeTarget "RCTSpotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C55BCD881E8DA9BE0001BBA4 /* Debug */,
+				C55BCD891E8DA9BE0001BBA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C55BCD761E8DA9BE0001BBA4 /* Project object */;
+}
