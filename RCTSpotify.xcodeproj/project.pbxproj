@@ -243,8 +243,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HG34E8EYT2;
-				FRAMEWORK_SEARCH_PATHS = "~/Dropbox/Projects/MusicApp/Code/groovetrain-clients/ios/**";
-				HEADER_SEARCH_PATHS = "~/Dropbox/Projects/MusicApp/Code/groovetrain-clients/ios/**";
+				FRAMEWORK_SEARCH_PATHS = .;
+				HEADER_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -255,8 +255,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = HG34E8EYT2;
-				FRAMEWORK_SEARCH_PATHS = "~/Dropbox/Projects/MusicApp/Code/groovetrain-clients/ios/**";
-				HEADER_SEARCH_PATHS = "~/Dropbox/Projects/MusicApp/Code/groovetrain-clients/ios/**";
+				FRAMEWORK_SEARCH_PATHS = .;
+				HEADER_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
