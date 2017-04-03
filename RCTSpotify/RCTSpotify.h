@@ -7,10 +7,11 @@
 //
 
 #import <React/RCTBridgeModule.h>
+#import <React/RCTEventEmitter.h>
 #import <SpotifyAudioPlayback/SpotifyAudioPlayback.h>
 #import <SpotifyAuthentication/SpotifyAuthentication.h>
 
-@interface RCTSpotify : NSObject <RCTBridgeModule, SPTAudioStreamingDelegate>
+@interface RCTSpotify : RCTEventEmitter <RCTBridgeModule, SPTAudioStreamingDelegate, SPTCoreAudioControllerDelegate, SPTAudioStreamingPlaybackDelegate>
 @property (nonatomic, strong) SPTAudioStreamingController *player;
 @property (nonatomic, strong) SPTAuth *auth;
 @end
