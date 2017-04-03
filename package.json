@@ -1,6 +1,6 @@
 {
   "name": "react-native-spotify-ios",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A React Native Native Module for the Spotify iOS SDK",
   "main": "Spotify.js",
   "scripts": {
@@ -23,5 +23,13 @@
   "bugs": {
     "url": "https://github.com/aakarim/react-native-spotify-ios/issues"
   },
-  "homepage": "https://github.com/aakarim/react-native-spotify-ios#readme"
+  "homepage": "https://github.com/aakarim/react-native-spotify-ios#readme",
+  "peerDependencies": {
+    "react-native": "^0.42.3"
+  },
+  "optionalDependencies": {
+    "immutable": "^3.8.1",
+    "keymirror": "^0.1.1",
+    "redux": "^3.6.0"
+  }
 }
