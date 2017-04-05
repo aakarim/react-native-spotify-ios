@@ -100,12 +100,15 @@ RCT_EXPORT_METHOD(startAudioController:(RCTPromiseResolveBlock)resolve
                   withRejecter:(RCTPromiseRejectBlock)reject)
 {
     if(self.player.initialized) {
-        RCTLog(@"Player already started, stopping...");
-        [self.player stopWithError:nil];
+        RCTLog(@"Spotify Audio Controller already started");
+        resolve(@[]);
+        return;
+//        [self.player stopWithError:nil];
     }
     // Start up the streaming controller.
     NSError *audioStreamingInitError;
-    
+    RCTLog(@"Starting Spotify Audio Controller");
+
     NSAssert([self.player startWithClientId:self.auth.clientID error:&audioStreamingInitError],
              @"There was a problem starting the Spotify SDK: %@", audioStreamingInitError.
              description);
@@ -118,9 +121,13 @@ RCT_EXPORT_METHOD(startAudioController:(RCTPromiseResolveBlock)resolve
 
 RCT_EXPORT_METHOD(loginWithAccessToken:(NSString *)accessToken)
 {
+    if(self.player.loggedIn) {
+        RCTLog(@"Spotify player already logged in, not logging in.");
+        [self audioStreamingDidLogin:self.player];
+        return;
+    }
     RCTLogInfo(@"Logging in with access token %@ ", accessToken);
     [self.player loginWithAccessToken:accessToken];
-//    resolve(@[]);
 };
 
 RCT_EXPORT_METHOD(playSpotifyURI:(NSString *)spotifyUri startingWithIndex:(NSNumber * _Nonnull)index startingWithPosition:(NSNumber * _Nonnull)position withResolver:(RCTPromiseResolveBlock)resolve
@@ -186,7 +193,8 @@ RCT_EXPORT_METHOD(setIsPlaying:(BOOL)isPlaying withResolver:(RCTPromiseResolveBl
 }
 - (void)audioStreamingDidLogin:(SPTAudioStreamingController *)audioStreaming
 {
-    RCTLogInfo(@"Logged in");
+
+    RCTLogInfo(@"Spotify logged in");
     [self sendEventWithName:@"audioStreamingDidLogin" body:@{}];
 }
 - (void)audioStreamingDidLogout:(SPTAudioStreamingController *)audioStreaming
