@@ -148,11 +148,18 @@ RCT_EXPORT_METHOD(playSpotifyURI:(NSString *)spotifyUri startingWithIndex:(NSNum
     }];
 }
 
-RCT_EXPORT_METHOD(stopWithError)
+RCT_EXPORT_METHOD(stopWithErrorWithResolver:(RCTPromiseResolveBlock)resolve
+                  withRejecter:(RCTPromiseRejectBlock)reject)
 {
-    NSError *__autoreleasing * err = nil;
+    NSError *__autoreleasing * err;
     [self.player stopWithError:err];
+    if(err) {
+        reject(@"spotify", @"Thread shutdown error", nil);
+        return;
+    }
+    resolve(@[]);
 }
+
 
 RCT_EXPORT_METHOD(logout)
 {
