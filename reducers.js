@@ -63,6 +63,10 @@ export default (reducers = combineReducers({
         return state
           .set("accessToken", action.accessToken)
           .set("refreshToken", action.refreshToken);
+      case AudioStreaming.SPOTIFY_audioStreamingDidLogin:
+        return state.set("loggedIn", true);
+      case AudioStreaming.SPOTIFY_audioStreamingDidLogout:
+        return state.set("loggedIn", false);
       default:
         return state;
     }
