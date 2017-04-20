@@ -71,7 +71,7 @@ RCT_EXPORT_METHOD(seekTo:(NSNumber * _Nonnull)position withResolver:(RCTPromiseR
 {
     NSTimeInterval timeInterval = [RCTConvert NSTimeInterval:position];
     RCTLog(@"Seeking to %@", timeInterval);
-    [self.player seekTo:timeInterval callback:^(NSError *error) {
+    [self.player seekTo:(timeInterval * 1000) callback:^(NSError *error) { // Expects in seconds
         if (error != nil) {
             NSLog(@"*** failed to seek: %@", error);
             reject(@"spotify", @"Seek error", error);
@@ -177,6 +177,15 @@ RCT_EXPORT_METHOD(setIsPlaying:(BOOL)isPlaying withResolver:(RCTPromiseResolveBl
         }
         resolve(@"");
     }];
+}
+
+/*
+    Custom Methods
+    */
+RCT_EXPORT_METHOD(getMetadata:(RCTPromiseResolveBlock)resolve
+                  withRejecter:(RCTPromiseRejectBlock)reject)
+{
+    resolve(@[[RCTSpotify playbackMetadataToDictionary:[self.player metadata]]]);
 }
 
 /*
