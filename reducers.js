@@ -2,7 +2,7 @@ import { Events } from "./constants";
 const Spotify = require("./Spotify");
 import { Map, Record } from "immutable";
 import { combineReducers } from "redux";
-import { AudioStreaming } from "./constants";
+import { AudioStreaming, Auth } from "./constants";
 
 const PlaybackTrack = new Record({
   name: "",
@@ -51,6 +51,7 @@ export default (reducers = combineReducers({
   instance: (state = initialState.instance, action) => {
     switch (action.type) {
       case Events.SPOTIFY_AUTH_COMPLETE:
+      // TODO: this is an antipattern - not a pure function!!
         Spotify.initialize(action.accessToken, action.clientId);
         return Spotify;
       default:
@@ -62,9 +63,9 @@ export default (reducers = combineReducers({
       case Events.SPOTIFY_AUTH_COMPLETE:
         return state
           .set("accessToken", action.accessToken)
-          .set("refreshToken", action.refreshToken);
-      case AudioStreaming.SPOTIFY_audioStreamingDidLogin:
-        return state.set("loggedIn", true);
+          .set("refreshToken", action.refreshToken)
+          .set("loggedIn", true);
+      case Auth.SPOTIFY_AUTH_FAILURE:
       case AudioStreaming.SPOTIFY_audioStreamingDidLogout:
         return state.set("loggedIn", false);
       default:
@@ -78,6 +79,7 @@ export default (reducers = combineReducers({
     switch (action.type) {
       case AudioStreaming.SPOTIFY_audioStreamingDidLogin:
         return state.set("loggedIn", true);
+      case Auth.SPOTIFY_AUTH_FAILURE:
       case AudioStreaming.SPOTIFY_audioStreamingDidLogout:
         return state.set("loggedIn", false);
       case AudioStreaming.SPOTIFY_audioStreamingDidSeekToPosition:

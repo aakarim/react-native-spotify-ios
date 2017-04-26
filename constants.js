@@ -4,6 +4,10 @@ export const Events = keyMirror({
   SPOTIFY_AUTH_COMPLETE: null,
 });
 
+export const Auth = keyMirror({
+  SPOTIFY_AUTH_FAILURE: null,
+});
+
 export const AudioStreaming = keyMirror({
   SPOTIFY_audioStreamingDidLogout: null,
   SPOTIFY_audioStreamingDidReceiveError: null,

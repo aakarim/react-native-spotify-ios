@@ -1,6 +1,6 @@
 const Spotify = require('./Spotify');
 import { NativeEventEmitter } from 'react-native';
-import { AudioStreaming } from './constants';
+import { AudioStreaming, Auth } from './constants';
 
 export default registerEventHandlers = (dispatch) => {
   const spotifyEmitter = new NativeEventEmitter(Spotify);
@@ -15,6 +15,13 @@ export default registerEventHandlers = (dispatch) => {
   });
   const receiveErrorSubscription = spotifyEmitter.addListener('audioStreamingDidReceiveError', (body) => {
     console.log('Spotify: Error:', body);
+    switch (body.error) {
+      case 8:
+        return dispatch({
+          type: Auth.SPOTIFY_AUTH_FAILURE,
+        });
+      default:
+    }
   });
   const loginSubscription = spotifyEmitter.addListener('audioStreamingDidLogin', (body) => {
     dispatch({
